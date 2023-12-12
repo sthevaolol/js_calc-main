@@ -71,21 +71,23 @@ class Calculator {
     }
   }
 
-  // Mudar os valores na tela da calculadora
+  // Muda os valores na tela da calculadora
   updateScreen(
     operationValue = null,
     operation = null,
     current = null,
     previous = null
+
   ) {
     if (operationValue === null) {
       // Append number to current value
       this.currentOperationText.innerText += this.currentOperation;
     } else {
-      // Checa se o valor é zero, se for adiciona um valor
+      // Checa se o valor é zero
       if (previous === 0) {
         operationValue = current;
       }
+      
       // Adiciona um valor válido na tela
       this.previousOperationText.innerText = `${operationValue} ${operation}`;
       this.currentOperationText.innerText = "";
