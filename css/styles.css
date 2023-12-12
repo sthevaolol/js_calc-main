@@ -89,7 +89,7 @@ body {
   position: fixed;
   width: 90%;
   text-align: center;
-  color: white;
+  color:black;
 }
 
 .fixarRodape > a {
@@ -98,5 +98,6 @@ body {
 }
 
 .fixarRodape > a:hover {
+  color: rgb(38, 172, 172);
   text-decoration: dashed;
 }
