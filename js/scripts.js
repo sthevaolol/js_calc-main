@@ -87,7 +87,7 @@ class Calculator {
       if (previous === 0) {
         operationValue = current;
       }
-      
+
       // Adiciona um valor válido na tela
       this.previousOperationText.innerText = `${operationValue} ${operation}`;
       this.currentOperationText.innerText = "";
@@ -131,6 +131,8 @@ class Calculator {
   }
 }
 
+
+ // Operação dos buttons
 const calc = new Calculator(previousOperationText, currentOperationText);
 
 buttons.forEach((btn) => {
