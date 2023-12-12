@@ -6,7 +6,7 @@
 }
 
 body {
- background-image: url(" ");
+  background-color: #dbdbdb;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,6 +14,8 @@ body {
 }
 
 #calc {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.541);
+  border-radius: 10px;
   width: 400px;
   padding: 0.5em;
   background-color: #c4c4c4;
@@ -96,6 +98,5 @@ body {
 }
 
 .fixarRodape > a:hover {
-  text-decoration: overline;
-  color: #666;
+  text-decoration: dashed;
 }
