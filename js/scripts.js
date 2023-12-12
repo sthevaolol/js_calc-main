@@ -9,10 +9,10 @@ class Calculator {
     this.currentOperation = "";
   }
 
-  // add digit to calculator screen
+  // Adiciona um digito na tela da calculadora
   addDigit(digit) {
     console.log(digit);
-    // Check if number already has a dot
+    // Confirma se o nummero não é um ponto
     if (digit === "." && this.currentOperationText.innerText.includes(".")) {
       return;
     }
@@ -21,18 +21,18 @@ class Calculator {
     this.updateScreen();
   }
 
-  // process all calculator operations
+  // Processa as operações da calculadora
   processOperation(operation) {
-    // Check if current value is empty
+    // Verficiar se o valor está vazio
     if (this.currentOperationText.innerText === "" && operation !== "C") {
-      // Change operation
+      // Muda o operador
       if (this.previousOperationText.innerText !== "") {
         this.changeOperation(operation);
       }
       return;
     }
 
-    // Get current and previous values
+    // Pega valores atuais ou antigos
     let operationValue;
     let previous = +this.previousOperationText.innerText.split(" ")[0];
     let current = +this.currentOperationText.innerText;
@@ -71,7 +71,7 @@ class Calculator {
     }
   }
 
-  // Change values of calculator screen
+  // Mudar os valores na tela da calculadora
   updateScreen(
     operationValue = null,
     operation = null,
@@ -82,17 +82,17 @@ class Calculator {
       // Append number to current value
       this.currentOperationText.innerText += this.currentOperation;
     } else {
-      // Check if value is zero, if is just add current value
+      // Checa se o valor é zero, se for adiciona um valor
       if (previous === 0) {
         operationValue = current;
       }
-      // Add current value to previous
+      // Adiciona um valor válido na tela
       this.previousOperationText.innerText = `${operationValue} ${operation}`;
       this.currentOperationText.innerText = "";
     }
   }
 
-  // Change math operation
+  // Escolher Operador
   changeOperation(operation) {
     const mathOperations = ["*", "-", "+", "/"];
 
@@ -104,24 +104,24 @@ class Calculator {
       this.previousOperationText.innerText.slice(0, -1) + operation;
   }
 
-  // Delete a digit
+  // Deletar um Dígito
   processDelOperator() {
     this.currentOperationText.innerText =
       this.currentOperationText.innerText.slice(0, -1);
   }
 
-  // Clear current operation
+  // Limpar a Operação atual
   processClearCurrentOperator() {
     this.currentOperationText.innerText = "";
   }
 
-  // Clear all operations
+  // Limpar 
   processClearOperator() {
     this.currentOperationText.innerText = "";
     this.previousOperationText.innerText = "";
   }
 
-  // Process an operation
+  // Processar uma Operação
   processEqualOperator() {
     let operation = this.previousOperationText.innerText.split(" ")[1];
 

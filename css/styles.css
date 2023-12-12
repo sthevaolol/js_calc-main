@@ -81,3 +81,21 @@ body {
   grid-column: span 2;
   background-color: #3a91d8;
 }
+
+.fixarRodape {
+  bottom: 0;
+  position: fixed;
+  width: 90%;
+  text-align: center;
+  color: white;
+}
+
+.fixarRodape > a {
+  text-decoration: none;
+  color: white;
+}
+
+.fixarRodape > a:hover {
+  text-decoration: overline;
+  color: #666;
+}
